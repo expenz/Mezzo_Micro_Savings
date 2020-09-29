@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:elevation="20dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#FFF3E0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="5dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/nametitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME : "
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:textSize="15.5sp"/>
+            <TextView
+                android:id="@+id/custumername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginStart="5dp"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:layout_toEndOf="@id/nametitle"
+                android:textSize="15.5sp"/>
+
+            <TextView
+                android:id="@+id/balancetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BALANCE (NGN) : "
+                android:layout_below="@id/nametitle"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:textSize="15.5sp"/>
+            <TextView
+                android:id="@+id/custumerbalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/custumername"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:layout_toEndOf="@id/balancetitle"
+                android:textSize="15.5sp"/>
+
+            <TextView
+                android:id="@+id/phonetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHONE NO : "
+                android:layout_below="@id/balancetitle"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:textSize="15.5sp"/>
+            <TextView
+                android:id="@+id/custumerphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginStart="5dp"
+                android:layout_below="@id/custumerbalance"
+                android:textAllCaps="true"
+                android:fontFamily="serif"
+                android:layout_toEndOf="@id/phonetitle"
+                android:textSize="15.5sp"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/custumerphone"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <ImageView
+                    android:id="@+id/deposit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:paddingStart="-30dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_round_money_24" />
+
+                <ImageView
+                    android:id="@+id/withdraw"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:paddingStart="-15dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_round_credit_card_24" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:paddingStart="15dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/ic_outline_edit_24" />
+
+                <ImageView
+                    android:id="@+id/delete_contact"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="7dp"
+                    android:paddingEnd="-30dp"
+                    android:src="@drawable/ic_outline_delete_forever_24" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
